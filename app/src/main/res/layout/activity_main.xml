@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/configTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="eBots Auton Configurator"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Switch
+        android:id="@+id/allianceSwitch"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="20dp"
+        android:showText="true"
+        android:splitTrack="true"
+        android:text="Alliance"
+        android:textColor="@android:color/black"
+        android:textOff="BLUE"
+        android:textOn="RED"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/configTitle"
+        tools:checked="false" />
+
+    <Switch
+        android:id="@+id/fieldsideSwitch"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="20dp"
+        android:showText="true"
+        android:splitTrack="false"
+        android:text="Side"
+        android:textColor="@android:color/black"
+        android:textOff="QUARRY"
+        android:textOn="FOUNDATION"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/allianceSwitch"
+        tools:checked="false" />
+
+    <Switch
+        android:id="@+id/delaySwitch"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="20dp"
+        android:showText="true"
+        android:splitTrack="false"
+        android:text="Delayed Start"
+        android:textColor="@android:color/black"
+        android:textOff="NO"
+        android:textOn="YES"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fieldsideSwitch"
+        tools:checked="false" />
+
+    <Switch
+        android:id="@+id/foundationSwitch"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="20dp"
+        android:showText="true"
+        android:splitTrack="false"
+        android:text="Foundation"
+        android:textColor="@android:color/black"
+        android:textOff="DEFAULT"
+        android:textOn="ROTATED"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/delaySwitch"
+        tools:checked="false" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="359dp"
+        android:layout_height="218dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="25dp"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/writeStatus"
+        app:srcCompat="@drawable/foundation_blue" />
+
+    <Button
+        android:id="@+id/saveButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="100dp"
+        android:text="Save Config"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/foundationSwitch" />
+
+    <TextView
+        android:id="@+id/writeStatus"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="50dp"
+        android:text="Not saved"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="10sp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/saveButton" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
